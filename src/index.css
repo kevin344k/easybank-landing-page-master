@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme{
+
+
+--color-fm-dark-blue: hsl(233, 26%, 24%);
+--color-fm-lime-green: hsl(136, 65%, 51%);
+--color-fm-bright-cyan: hsl(192, 70%, 51%);
+
+--color-fm-grayis-blue: hsl(233, 8%, 62%);
+--color-fm-light-grayish-blue: hsl(220, 16%, 96%);
+--color-fm-very-light-gray: hsl(0, 0%, 98%);
+--color-fm-White: hsl(0, 0%, 100%);
+--shadow-fm-new:'0 10px 15px -3px rgb(0 0 0 / 0.1)';
+/*fonts */
+  --font-fm-publicSans:"Public Sans", sans-serif;
+}

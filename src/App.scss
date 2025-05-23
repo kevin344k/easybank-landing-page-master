@@ -1,0 +1,212 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-fm-publicSans);
+}
+
+main {
+
+
+  .section-why-easybank {
+    div {
+      ul {
+        margin: 3rem 0;
+        li {
+          margin: 3rem 0;
+          img {
+            margin: auto;
+          }
+          :nth-child(2) {
+            color: var(--color-neutral-600);
+            margin: 1rem 0;
+          }
+
+          :nth-child(3) {
+            color: var(--color-fm-grayis-blue);
+            font-size: var(--text-sm);
+          }
+          .darkFull{
+            color: #1f1f1f;
+          }
+        }
+      }
+    }
+  }
+  .section-articles {
+    ul {
+      li {
+        margin-bottom: 1.4rem;
+        border-bottom-left-radius: 0.6rem;
+        border-bottom-right-radius: 0.6rem;
+        div {
+          background-color: white;
+          padding: 1.6rem;
+          border-bottom-left-radius: 0.6rem;
+          border-bottom-right-radius: 0.6rem;
+          span {
+            font-size: var(--text-xs);
+            color: var(--color-fm-grayis-blue);
+          }
+          :nth-child(2) {
+            color: var(--color-neutral-600);
+            margin: 0.5rem 0;
+          }
+          :nth-child(3) {
+            color: var(--color-fm-grayis-blue);
+            font-size: var(--text-sm);
+          }
+          [data-theme="dark"] & {
+           background-color: red;
+          }
+        }
+        img {
+          border-top-left-radius: 0.6rem;
+          border-top-right-radius: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+.menu-modal {
+  z-index: 5;
+
+left: calc(50% - 10rem);
+
+
+  border-radius: 0.6rem;
+
+  li {
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.menu-modal-open {
+  
+  animation: slideDown 0.4s ease forwards;
+}
+.menu-modal-close {
+   
+  animation: slideUp 0.4s ease forwards;
+  z-index: -1;
+}
+
+nav {
+  .span-hamburger {
+    span {
+      display: block;
+      width: 2rem;
+      height: 0.06rem;
+      border-radius: 6px;
+      background-color: var(--color-neutral-500);
+      transition: all 0.5s ease-in-out;
+      transform-origin: center;
+    }
+    .span-1 {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .span-2 {
+      opacity: 0;
+    }
+    .span-3 {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(16rem);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(16rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-modal {
+    animation: none;
+    z-index: 1;
+    li {
+        padding-bottom: 1rem;
+      a {
+        position: relative;
+        text-decoration: none;
+    
+        padding: 0.5rem 1rem;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          height: 4px;
+          width: 0;
+          background: linear-gradient(to right,var(--color-fm-lime-green),var(--color-fm-bright-cyan));
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+      }
+    }
+  }
+
+  main{
+    .section-why-easybank{
+     div{
+       ul{
+        li{
+          img{
+            margin-left: 0;
+          }
+        }
+      }
+     }
+    }
+     .section-articles {
+      ul{
+        li{
+          overflow: hidden;
+        border-radius: 6px;
+            transition: transform .3s ease;
+          img{
+            width: 30rem;
+            height: 15.5rem;
+          
+          }
+          &:hover{
+              cursor: pointer;
+              transform: scale(1.05);
+              box-shadow: 0px 0px 3px 3px rgba($color: #00000015, $alpha: .1);
+              transition: transform  ease-in-out 0.3s;
+          }
+            &:hover>img{
+              transform: scale(1.05);
+              transition:  transform  ease-in-out 0.3s;
+              border-radius: 6px;
+            }
+        }
+      }
+    }
+  }
+
+
+}
